@@ -1,0 +1,29 @@
+.card {
+  transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(-180deg) rotateZ(0deg);
+  height: 100px;
+  width: 100px;
+}
+
+.shape {
+  margin: 0
+}
+
+.card-container {
+  position: absolute;
+}
+
+.fa.card-symbol {
+  line-height: 100px;
+  width: 100px;
+  text-align: center;
+}
+
+.face.tp {
+  background-color: red;
+}
+
+.face.bm {
+  background-color: blue;
+  transform: rotateX(-90deg) translateY(-50%) rotateZ(-90deg);
+  color: #fff;
+}
