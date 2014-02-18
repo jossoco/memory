@@ -1,0 +1,2 @@
+# paper
+### a Sails application

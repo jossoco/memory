@@ -1,0 +1,20 @@
+#tridiv {
+  width: 1250px;
+  height: 660px;
+}
+
+.scene {
+  transform: rotateX(90deg) rotateY(0deg);
+}
+
+.cuboid-1 {
+  transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.face.tp {
+  background-color: red;
+}
+
+.face.bm {
+  background-color: blue;
+}
