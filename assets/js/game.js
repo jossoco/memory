@@ -5,6 +5,9 @@ $( document ).ready(function() {
   var BASE_X = 20;
   var BASE_Y = 20;
   var FLIP_SPEED = 100;
+  var MAX_FLIPPED_CARDS = 2;
+
+  var flippedCards = [];
 
   var getCardSymbols = function (cardCount) {
     var allSymbols = config.CARD_SYMBOLS;
@@ -45,15 +48,31 @@ $( document ).ready(function() {
     }
   };
 
+  var flipCard = function (card) {
+    card.translate3d({yRotate: 0}, FLIP_SPEED);
+    card.addClass('flipped');
+  };
+
+  var unflipCard = function (card) {
+    card.translate3d({yRotate: -180}, FLIP_SPEED);
+    card.removeClass('flipped');
+  };
+
   var bindEvents = function () {
     var flip = function (event) {
       var el = $($(event.target).closest('.card'));
       if (el.hasClass('flipped')) {
-        el.translate3d({yRotate : -180}, FLIP_SPEED);
-        el.removeClass('flipped');
+        unflipCard(el);
+        flippedCards.splice(flippedCards.indexOf(el.attr('id'), 1));
       } else {
-        el.translate3d({yRotate : 0}, FLIP_SPEED);
-        el.addClass('flipped');
+        if (flippedCards.length === MAX_FLIPPED_CARDS) {
+          for (var i = 0; i < MAX_FLIPPED_CARDS; i++) {
+            unflipCard($('#' + flippedCards[i]));
+          }
+          flippedCards = [];
+        }
+        flipCard(el);
+        flippedCards.push(el.attr('id'));
       }
     };
 
