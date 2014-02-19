@@ -51,17 +51,35 @@ $( document ).ready(function() {
   var flipCard = function (card) {
     card.translate3d({yRotate: 0}, FLIP_SPEED);
     card.addClass('flipped');
+    flippedCards.push(card.attr('id'));
   };
 
   var unflipCard = function (card) {
     card.translate3d({yRotate: -180}, FLIP_SPEED);
     card.removeClass('flipped');
+    flippedCards.splice(flippedCards.indexOf(card.attr('id')), 1);
   };
 
-  var checkForMatch = function () {
+  var unflipAllCards = function () {
+    for (var i = 0; i < flippedCards.length; i++) {
+      var card = $('#' + flippedCards[i]);
+      card.translate3d({yRotate: -180}, FLIP_SPEED);
+      card.removeClass('flipped');
+    }
+    flippedCards = [];
+  };
+
+  var isMatch = function () {
     if (flippedCards.length !== MAX_FLIPPED_CARDS) return false;
     return flippedCards[0].substring(0, flippedCards[0].length - 2) ===
            flippedCards[1].substring(0, flippedCards[1].length - 2);
+  };
+
+  var checkForMatch = function () {
+    if (isMatch()) {
+      $('#' + flippedCards[0]).add('#' + flippedCards[1]).fadeOut();
+      flippedCards = [];
+    }
   };
 
   var bindEvents = function () {
@@ -69,27 +87,16 @@ $( document ).ready(function() {
       var el = $($(event.target).closest('.card'));
       if (el.hasClass('flipped')) {
         unflipCard(el);
-        flippedCards.splice(flippedCards.indexOf(el.attr('id'), 1));
       } else {
-
         if (flippedCards.length === MAX_FLIPPED_CARDS) {
-          // unflip all cards before flipping another
-          for (var i = 0; i < MAX_FLIPPED_CARDS; i++) {
-            unflipCard($('#' + flippedCards[i]));
-          }
-          flippedCards = [];
+          unflipAllCards();
         }
-
         flipCard(el);
-        flippedCards.push(el.attr('id'));
-        if (checkForMatch()) {
-          // match -- remove both cards
-          $('#' + flippedCards[0]).add('#' + flippedCards[1]).fadeOut();
-          flippedCards = [];
-        }
+        checkForMatch();
       }
     };
 
+    // bind events
     $('.card').bind('click', flip);
   };
 
