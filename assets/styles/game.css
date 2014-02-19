@@ -1,5 +1,10 @@
+html, body {
+  height: 100%;
+}
+
 body {
   background-color: #aaa;
+  overflow: hidden;
 }
 
 body > .wrapper {
@@ -11,6 +16,35 @@ body > .wrapper {
   opacity: 0.6;
   height: 100%;
   width: 100%;
+  left: 20%;
+}
+
+body.panel-hide > .wrapper {
+  left: 30px;
+}
+
+body.panel-hide .game-panel {
+  left: 45px;
+}
+
+body.panel-hide .menu-panel {
+  width: 30px;
+}
+
+body.panel-hide .panel-toggle {
+  width: 30px;
+}
+
+body.panel-hide .panel-toggle:before {
+  content: ">>";
+}
+
+.panel-toggle {
+  width: 100%;
+}
+
+.panel-toggle:before {
+  content: "<< Hide";
 }
 
 .face .wrapper {
@@ -28,10 +62,15 @@ body > .wrapper {
   opacity: 1;*/
 }
 
-.panel {
+.game-panel {
   position: absolute;
+  left: 22%;
   top: 15px;
-  left: 15px;
+}
+
+.menu-panel {
+  width: 20%;
+  height: 100%;
 }
 
 .card {

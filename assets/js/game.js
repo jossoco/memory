@@ -90,6 +90,17 @@ $(document).ready(function() {
     }
   };
 
+  var togglePanel = function () {
+    var body = $('body');
+    if (body.hasClass('panel-hide')) {
+      // show panel
+      body.removeClass('panel-hide');
+    } else {
+      // hide panel
+      body.addClass('panel-hide');
+    }
+  };
+
   var bindEvents = function () {
     var flip = function (event) {
       var el = $($(event.target).closest('.card'));
@@ -106,6 +117,7 @@ $(document).ready(function() {
 
     // bind events
     $('.card').bind('click', flip);
+    $('.panel-toggle').bind('click', togglePanel);
   };
 
   appendCards();
