@@ -1,25 +1,15 @@
-/* /!\ You need to add vendor prefixes in order to render the CSS properly (or simply use http://leaverou.github.io/prefixfree/) /!\ */ #tridiv {
-  position: absolute;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  font-size: 100%;
-}
 .face {
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.4);
+  background-color:#FFFFFF;
+  background-size: 100% 100%!important;
+  background-position: center;
 }
-.scene, .shape, .face, .face-wrapper, .cr {
+
+.shape, .face, .face-wrapper, .cr {
   position: absolute;
   transform-style: preserve-3d;
 }
-.scene {
-  width: 80em;
-  height: 80em;
-  top: 50%;
-  left: 50%;
-  margin: -40em 0 0 -40em;
-}
+
 .shape {
   top: 50%;
   left: 50%;
@@ -27,21 +17,20 @@
   height: 0;
   transform-origin: 50%;
 }
+
 .face, .face-wrapper {
   overflow: hidden;
   transform-origin: 0 0;
   backface-visibility: hidden;
   /* hidden by default, prevent blinking and other weird rendering glitchs */
 }
-.face {
-  background-size: 100% 100%!important;
-  background-position: center;
-}
+
 .face-wrapper .face {
   left: 100%;
   width: 100%;
   height: 100%
 }
+
 .photon-shader {
   position: absolute;
   left: 0;
@@ -49,38 +38,15 @@
   width: 100%;
   height: 100%
 }
+
 .side {
   left: 50%;
 }
+
 .cr, .cr .side {
   height: 100%;
 }
-.card .ft, .card .bk {
-  width: 100%;
-  height: 100%;
-}
-.card .bk {
-  left: 100%;
-}
-.card .rt {
-  transform: rotateY(-90deg) translateX(-50%);
-}
-.card .lt {
-  transform: rotateY(90deg) translateX(-50%);
-}
-.card .tp {
-  transform: rotateX(90deg) translateY(-50%);
-}
-.card .bm {
-  transform: rotateX(-90deg) translateY(-50%);
-}
-.card .lt {
-  left: 100%;
-}
-.card .bm {
-  top: 100%;
-}
-/* .cub-1 styles */
+
 .card {
   transform:translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   opacity:1;
@@ -88,20 +54,45 @@
   height:3em;
   margin:-1.5em 0 0 -2em;
 }
+
+.card .ft, .card .bk {
+  width: 100%;
+  height: 100%;
+}
+
 .card .ft {
   transform:translateZ(0.05em);
 }
+
 .card .bk {
+  left: 100%;
   transform:translateZ(-0.05em) rotateY(180deg);
 }
+
+.card .rt {
+  transform: rotateY(-90deg) translateX(-50%);
+}
+
+.card .lt {
+  transform: rotateY(90deg) translateX(-50%);
+  left: 100%;
+}
+
+.card .tp {
+  transform: rotateX(90deg) translateY(-50%);
+}
+
+.card .bm {
+  transform: rotateX(-90deg) translateY(-50%);
+  top: 100%;
+}
+
 .card .rt, .card .lt {
   width:.1em;
   height:3em;
 }
+
 .card .tp, .card .bm {
   width:4em;
   height:.1em;
-}
-.card .face {
-  background-color:#FFFFFF;
 }
