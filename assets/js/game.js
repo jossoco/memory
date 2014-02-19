@@ -13,12 +13,22 @@ $( document ).ready(function() {
     var allSymbols = config.CARD_SYMBOLS;
     var cardSymbols = [];
     for (var i = 0; i < cardCount; i++) {
-      var symbolIndex = parseInt(Math.random() * allSymbols.length, 10);
+      var symbolIndex = Math.floor(Math.random() * allSymbols.length);
       var symbol = allSymbols[symbolIndex];
       cardSymbols.push(symbol);
       allSymbols.splice(symbolIndex, 1);
     }
     return cardSymbols;
+  };
+
+  var shuffle = function (cards) {
+    for (var i = 0; i < cards.length; i++) {
+      var swap = Math.floor(Math.random() * cards.length);
+      var temp = cards[i];
+      cards[i] = cards[swap];
+      cards[swap] = temp;
+    }
+    return cards;
   };
 
   var getCards = function () {
@@ -31,7 +41,7 @@ $( document ).ready(function() {
       cards.push(Card('card-' + i + '-a', symbols[i]));
       cards.push(Card('card-' + i + '-b', symbols[i]));
     }
-    return cards;
+    return shuffle(cards);
   };
 
   var appendCards = function () {
