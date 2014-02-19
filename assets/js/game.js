@@ -58,6 +58,12 @@ $( document ).ready(function() {
     card.removeClass('flipped');
   };
 
+  var checkForMatch = function () {
+    if (flippedCards.length !== MAX_FLIPPED_CARDS) return false;
+    return flippedCards[0].substring(0, flippedCards[0].length - 2) ===
+           flippedCards[1].substring(0, flippedCards[1].length - 2);
+  };
+
   var bindEvents = function () {
     var flip = function (event) {
       var el = $($(event.target).closest('.card'));
@@ -65,14 +71,22 @@ $( document ).ready(function() {
         unflipCard(el);
         flippedCards.splice(flippedCards.indexOf(el.attr('id'), 1));
       } else {
+
         if (flippedCards.length === MAX_FLIPPED_CARDS) {
+          // unflip all cards before flipping another
           for (var i = 0; i < MAX_FLIPPED_CARDS; i++) {
             unflipCard($('#' + flippedCards[i]));
           }
           flippedCards = [];
         }
+
         flipCard(el);
         flippedCards.push(el.attr('id'));
+        if (checkForMatch()) {
+          // match -- remove both cards
+          $('#' + flippedCards[0]).add('#' + flippedCards[1]).fadeOut();
+          flippedCards = [];
+        }
       }
     };
 
