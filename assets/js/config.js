@@ -19,7 +19,6 @@ config = {
     'fa-flask',
     'fa-lemon-o', 
     'fa-flag-checkered',
-    'fa-phone',
     'fa-puzzle-piece',
     'fa-rocket',
     'fa-umbrella',
@@ -39,6 +38,9 @@ config = {
     'fa-trophy',
     'fa-truck',
     'fa-headphones',
-    'fa-clock-o'
+    'fa-sun-o',
+    'fa-ticket',
+    'fa-male',
+    'fa-lightbulb-o'
   ]
 };
