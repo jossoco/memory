@@ -1,9 +1,7 @@
-$( document ).ready(function() {
+$(document).ready(function() {
 
   var ROWS = 4;
   var COLUMNS = 4;
-  var BASE_X = 20;
-  var BASE_Y = 20;
   var FLIP_SPEED = 100;
   var MAX_FLIPPED_CARDS = 2;
 
@@ -53,8 +51,8 @@ $( document ).ready(function() {
 
       var row = parseInt(i / COLUMNS, 10);
       var col = i - row * COLUMNS;
-      container.css('left', BASE_X + (col * 120) + 'px');
-      container.css('top', BASE_Y + (row * 120) + 'px');
+      container.css('left', col * 120 + 'px');
+      container.css('top', row * 120 + 'px');
     }
   };
 
