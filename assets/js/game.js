@@ -20,12 +20,11 @@ $(document).ready(function() {
   };
 
   var shuffle = function (cards) {
-    for (var i = 0; i < cards.length; i++) {
+    _.each(cards, function (card, i) {
       var swap = Math.floor(Math.random() * cards.length);
-      var temp = cards[i];
       cards[i] = cards[swap];
-      cards[swap] = temp;
-    }
+      cards[swap] = card;
+    });
     return cards;
   };
 
@@ -43,17 +42,18 @@ $(document).ready(function() {
   };
 
   var appendCards = function () {
+    var gamePanel = $('#game');
     var cards = getCards();
-    for (var i = 0; i < cards.length; i++) {
-      $('#game').append(cards[i]);
-      var id = $(cards[i]).find('.card').attr('id');
+    _.each(cards, function (card, i) {
+      gamePanel.append(card);
+      var id = $(card).find('.card').attr('id');
       var container = $('#' + id).parent();
 
       var row = parseInt(i / COLUMNS, 10);
       var col = i - row * COLUMNS;
       container.css('left', col * 120 + 'px');
       container.css('top', row * 120 + 'px');
-    }
+    });
   };
 
   var flipCard = function (card) {
@@ -69,11 +69,11 @@ $(document).ready(function() {
   };
 
   var unflipAllCards = function () {
-    for (var i = 0; i < flippedCards.length; i++) {
-      var card = $('#' + flippedCards[i]);
+    _.each(flippedCards, function (cardId) {
+      var card = $('#' + cardId);
       card.translate3d({yRotate: -180}, FLIP_SPEED);
       card.removeClass('flipped');
-    }
+    });
     flippedCards = [];
   };
 
@@ -110,5 +110,4 @@ $(document).ready(function() {
 
   appendCards();
   bindEvents();
-
 });
