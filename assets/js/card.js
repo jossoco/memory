@@ -3,25 +3,25 @@ Card = function (id, symbol) {
   return '<div class="card-container">' +
       '<div class="shape card" id="' + id + '">' +
       '<div class="face ft">' +
-      '<div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.223529);">' +
+      '<div class="wrapper ft">' +
       '<span class="card-symbol fa fa-3x ' + symbol + '"></span>' +
       '</div>' +
       '</div>' +
       '<div class="face bk">' +
-      '<div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.372549);"></div>' +
+      '<div class="wrapper bk"></div>' +
       '</div>' +
       '<div class="face rt">' +
-      '<div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.227451);"></div>' +
+      '<div class="wrapper rt"></div>' +
       '</div>' +
       '<div class="face lt">' +
-      '<div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.372549);"></div>' +
+      '<div class="wrapper lt"></div>' +
       '</div>' +
       '<div class="face bm">' +
-      '<div class="photon-shader" style="background-color: rgba(0, 0, 0, 0.647059);">' +
+      '<div class="wrapper bm">' +
       '</div>' +
       '</div>' +
       '<div class="face tp">' +
-      '<div class="photon-shader" style="background-color: rgba(255, 255, 255, 0.0431373);"></div>' +
+      '<div class="wrapper tp"></div>' +
       '</div>' +
       '</div></div>';
 };
