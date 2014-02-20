@@ -9,38 +9,9 @@ body {
 
 body > .wrapper {
   position: absolute;
-  opacity: 0.6;
   height: 100%;
   width: 100%;
   z-index: 1;
-}
-
-body.dark-wood {
-  background-color: #B17E7E;
-}
-
-body.denim {
-  background-color: #1A2B4E;
-}
-
-body.wave-grid > .wrapper {
-  background-image:url("./../images/wavegrid.png");
-}
-
-body.dark-wood > .wrapper {
-  background-image:url("./../images/dark_wood.png");
-}
-
-body.denim > .wrapper {
-  background-image:url("./../images/denim.png");
-}
-
-body.dark-wood .card, body.denim .card {
-  box-shadow: #333 1px 2px 4px
-}
-
-body.dark-wood .card.flipped, body.denim .card.flipped {
-  box-shadow: #333 1px 2px 4px
 }
 
 .face .wrapper {

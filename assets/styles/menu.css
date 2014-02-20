@@ -85,27 +85,3 @@
 .background-label span {
   margin: 5px;
 }
-
-.background-option.dark-wood .background-sample .wrapper {
-  background-image:url("./../images/dark_wood.png");
-}
-
-.background-option.wave-grid .background-sample .wrapper {
-  background-image:url("./../images/wavegrid.png");
-}
-
-.background-option.denim .background-sample .wrapper {
-  background-image:url("./../images/denim.png");
-}
-
-.background-option.dark-wood .background-sample {
-  background-color: #B17E7E;
-}
-
-.background-option.wave-grid .background-sample {
-  background-color: #aaa;
-}
-
-.background-option.denim .background-sample {
-  background-color: #1A2B4E;
-}

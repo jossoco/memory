@@ -12,6 +12,10 @@ config = {
     denim: {
       id: 'denim',
       name: 'Denim'
+    },
+    honeycomb: {
+      id: 'honeycomb',
+      name: 'Honeycomb'
     }
   },
   CARD_SYMBOLS : [
