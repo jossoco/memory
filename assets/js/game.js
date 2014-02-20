@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   var ROWS = 4;
-  var COLUMNS = 8;
+  var COLUMNS = 7;
   var FLIP_SPEED = 100;
   var MAX_FLIPPED_CARDS = 2;
 

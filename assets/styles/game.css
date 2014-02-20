@@ -40,7 +40,7 @@ body.panel-hide > .wrapper {
 }
 
 body.panel-hide .game-panel {
-  left: 45px;
+  /*left: 45px;*/
 }
 
 body.panel-hide .menu-panel {
