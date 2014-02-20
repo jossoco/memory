@@ -1,0 +1,43 @@
+.background-option {
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  margin-top: -5px;;
+  padding: 0;
+  cursor: pointer;
+}
+
+.background-option.selected {
+  background-color: #ccc;
+}
+
+.background-option:hover {
+  background-color: #eee;
+}
+
+.background-sample {
+  width: 40px;
+  height: 40px;
+  float: left;
+  margin: 5px;
+  background-size: 80px 80px;
+}
+
+.background-label {
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  margin: 5px;
+}
+
+.background-label span {
+  margin: 5px;
+}
+
+.background-option.dark-wood .background-sample {
+  background-image:url("./../images/dark_wood.png");
+}
+
+.background-option.wave-grid .background-sample {
+  background-image:url("./../images/wavegrid.png");
+}

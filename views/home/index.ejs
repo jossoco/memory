@@ -3,9 +3,10 @@
   <link rel="stylesheet" href="../../styles/3p/bootstrap.min.css">
   <link rel="stylesheet" href="../../styles/shapes.css">
   <link rel="stylesheet" href="../../styles/game.css">
+  <link rel="stylesheet" href="../../styles/menu.css">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 </head>
-<body>
+<body class="wave-grid">
   <script src="../../js/3p/prefixfree.min.js"></script>
   <script src="../../js/3p/jquery-1.10.2.min.js"></script>
   <script src="../../js/3p/translate3d.js"></script>
@@ -17,6 +18,18 @@
   <div class="wrapper"></div>
   <div id="menu" class="panel menu-panel">
     <span class="panel-toggle"></span>
+
+    <div class="menu-item background-options">
+      <div id="dark-wood" class="background-option dark-wood">
+        <div class="background-sample"></div>
+        <div class="background-label"><span>Dark Wood</span></div>
+      </div>
+
+      <div id="wave-grid" class="selected background-option wave-grid">
+        <div class="background-sample"></div>
+        <div class="background-label"><span>Wave Grid</span></div>
+      </div>
+    </div>
   </div>
   <div id="game" class="panel game-panel"></div>
 </body>
