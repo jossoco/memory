@@ -65,7 +65,13 @@
   height: 40px;
   float: left;
   margin: 5px;
+}
+
+.background-sample .wrapper {
+  height: 100%;
+  width: 100%;
   background-size: 80px 80px;
+  opacity: 0.6;
 }
 
 .background-label {
@@ -79,10 +85,18 @@
   margin: 5px;
 }
 
-.background-option.dark-wood .background-sample {
+.background-option.dark-wood .background-sample .wrapper {
   background-image:url("./../images/dark_wood.png");
 }
 
-.background-option.wave-grid .background-sample {
+.background-option.wave-grid .background-sample .wrapper {
   background-image:url("./../images/wavegrid.png");
+}
+
+.background-option.dark-wood .background-sample {
+  background-color: #B17E7E;
+}
+
+.background-option.wave-grid .background-sample {
+  background-color: #aaa;
 }
