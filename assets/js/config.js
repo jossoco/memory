@@ -5,6 +5,10 @@ config = {
       id: 'dark-wood',
       name: 'Dark Wood'
     },
+    lightwood : {
+      id: 'light-wood',
+      name: 'Light Wood'
+    },
     wavegrid: {
       id: 'wave-grid',
       name: 'Wave Grid'
@@ -16,10 +20,6 @@ config = {
     honeycomb: {
       id: 'honeycomb',
       name: 'Honeycomb'
-    },
-    lightwood : {
-      id: 'light-wood',
-      name: 'Light Wood'
     }
   },
   CARD_SYMBOLS : [
