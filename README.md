@@ -1,2 +1,4 @@
-# paper
-### a Sails application
+# Memory
+### A Game
+
+Hacked together JS for now.
