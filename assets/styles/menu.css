@@ -18,11 +18,12 @@
 }
 
 .panel-toggle {
-  color: #fff;
   text-transform: uppercase;
   position: absolute;
   cursor: pointer;
   left: 153px;
+  color: #333;
+  opacity: 0.8;
 }
 
 .menu-panel .panel-toggle.settings-btn {
