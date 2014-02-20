@@ -9,9 +9,9 @@ config = {
       id: 'wave-grid',
       name: 'Wave Grid'
     },
-    brickwall: {
-      id: 'brick-wall',
-      name: 'Brick Wall'
+    denim: {
+      id: 'denim',
+      name: 'Denim'
     }
   },
   CARD_SYMBOLS : [

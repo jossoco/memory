@@ -125,7 +125,7 @@ $(document).ready(function() {
   var appendBackgroundOptions = function () {
     var container = $('.background-options');
     _.each(config.BACKGROUND_OPTIONS, function (option) {
-      var el = BackgroundOption(option.id, option.name);
+      var el = BackgroundOption(option.id, option.name, option.cssClass);
       container.append(el);
     });
   };

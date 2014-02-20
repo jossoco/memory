@@ -93,9 +93,8 @@
   background-image:url("./../images/wavegrid.png");
 }
 
-.background-option.brick-wall .background-sample .wrapper {
-  background-image:url("./../images/brickwall-colorized.png");
-  opacity: 1;
+.background-option.denim .background-sample .wrapper {
+  background-image:url("./../images/denim.png");
 }
 
 .background-option.dark-wood .background-sample {
@@ -104,4 +103,8 @@
 
 .background-option.wave-grid .background-sample {
   background-color: #aaa;
+}
+
+.background-option.denim .background-sample {
+  background-color: #1A2B4E;
 }
