@@ -69,3 +69,7 @@ body.honeycomb .card .face.bk {
 body.wave-grid .card .face.bk {
   background-color: #D6831A;
 }
+
+body.denim .card .face.bk {
+  background-color: #203563;
+}
