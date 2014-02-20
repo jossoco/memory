@@ -3,18 +3,20 @@
   height: 100%;
   background-color: #ccc;
   position: absolute;
-  z-index: 2;
+  z-index: 4;
   box-shadow: inset #888 -2px -2px 56px;
   border-radius: 0;
   border: none;
   border-right: 1px solid #888;
   left: -175px;
+  transform: translate3d(0,0,0); /* http://stackoverflow.com/questions/5472802/css-z-index-lost-after-webkit-transform-translate3d */
 }
 
 .menu-container {
-  width: 100%;
+  width: 185px;
   height: 100%;
   padding: 12px;
+  position: absolute;
 }
 
 .panel-toggle {
