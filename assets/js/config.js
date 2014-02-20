@@ -16,6 +16,10 @@ config = {
     honeycomb: {
       id: 'honeycomb',
       name: 'Honeycomb'
+    },
+    lightwood : {
+      id: 'light-wood',
+      name: 'Light Wood'
     }
   },
   CARD_SYMBOLS : [
