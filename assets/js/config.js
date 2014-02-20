@@ -20,6 +20,10 @@ config = {
     honeycomb: {
       id: 'honeycomb',
       name: 'Honeycomb'
+    },
+    graphpaper: {
+      id: 'graph-paper',
+      name: 'Graph Paper'
     }
   },
   CARD_SYMBOLS : [

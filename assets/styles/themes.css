@@ -48,6 +48,11 @@ body.light-wood > .wrapper,
   opacity: 1;
 }
 
+body.graph-paper > .wrapper,
+.theme-option.graph-paper .theme-sample .wrapper {
+  background-image:url("./../images/graph-paper.png");
+  opacity: 1;
+}
 
 /* Card shadows */
 
@@ -72,4 +77,8 @@ body.wave-grid .card .face.bk {
 
 body.denim .card .face.bk {
   background-color: #203563;
+}
+
+body.graph-paper .card .face.bk {
+  background-color: #6CAECE;
 }
