@@ -89,14 +89,22 @@ $(document).ready(function() {
     }
   };
 
-  var closeMenu = function (e) {
-    e.stopImmediatePropagation();
-    $('body').addClass('panel-hide');
+  var toggleMenu = function () {
+    var body = $('body');
+    var menu = $('.menu-panel');
+    menu.removeClass('slideIn').removeClass('slideOut');
+    if (body.hasClass('panel-hide')) {
+      menu.addClass('slideIn');
+      body.removeClass('panel-hide');
+    } else {
+      $('.menu-panel').addClass('slideOut');
+      body.addClass('panel-hide');
+    }
   };
 
   var openMenu = function (e) {
     e.stopImmediatePropagation();
-    $('body').removeClass('panel-hide');
+    $('.menu-panel').addClass('slideIn');
   };
 
   var setBackground = function (event) {
@@ -131,8 +139,7 @@ $(document).ready(function() {
     // bind events
     $('.card').bind('click', flip);
     $('.background-option').bind('click', setBackground);
-    $('.menu-panel .hide-btn').bind('click', closeMenu);
-    $('.menu-panel').bind('click', openMenu);
+    $('.menu-panel .panel-toggle').bind('click', toggleMenu);
   };
 
   appendCards();

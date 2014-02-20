@@ -1,5 +1,5 @@
 .menu-panel {
-  width: 15%;
+  width: 200px;
   height: 100%;
   background-color: #ccc;
   position: absolute;
@@ -8,11 +8,13 @@
   border-radius: 0;
   border: none;
   border-right: 1px solid #888;
+  left: -175px;
 }
 
 .menu-container {
   width: 100%;
   height: 100%;
+  padding: 12px;
 }
 
 .panel-toggle {
@@ -20,43 +22,24 @@
   text-transform: uppercase;
   position: absolute;
   cursor: pointer;
+  left: 153px;
 }
-
-.menu-panel .panel-toggle.hide-btn {
-  position: relative;
-} 
 
 .menu-panel .panel-toggle.settings-btn {
   transform: rotate(-90deg);
   top: 45%;
 } 
 
-body.panel-hide .menu-panel .panel-toggle.settings-btn {
-  display: inline-block;
+.slideIn {
+  animation-fill-mode: both;
+  transition: transform 0.7s;
+  transform: translateX(175px);
 }
 
-body.panel-hide .menu-panel .panel-toggle.hide-btn {
-  display: none;
-}
-
-body:not(.panel-hide) .menu-panel .panel-toggle.settings-btn {
-  display: none;
-}
-
-body:not(.panel-hide) .menu-panel .panel-toggle.hide-btn {
-  display: block;
-}
-
-body.panel-hide .menu-item {
-  display: none;
-}
-
-body:not(.panel-hide) .menu-item {
-  display: block;
-}
-
-body.panel-hide .menu-panel {
-  cursor: pointer;
+.slideOut {
+  animation-fill-mode: both;
+  transition: transform 0.7s;
+  transform: translateX(0px);
 }
 
 .background-option {
@@ -70,7 +53,7 @@ body.panel-hide .menu-panel {
 }
 
 .background-option.selected {
-  background-color: #ccc;
+  /*background-color: #ccc;*/
 }
 
 .background-option:hover {
