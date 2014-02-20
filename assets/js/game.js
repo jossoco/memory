@@ -92,13 +92,11 @@ $(document).ready(function() {
   var closeMenu = function (e) {
     e.stopImmediatePropagation();
     $('body').addClass('panel-hide');
-    $('.panel-menu').addClass('closed');
   };
 
   var openMenu = function (e) {
     e.stopImmediatePropagation();
     $('body').removeClass('panel-hide');
-    $('.panel-menu').removeClass('closed');
   };
 
   var setBackground = function (event) {
@@ -134,7 +132,7 @@ $(document).ready(function() {
     $('.card').bind('click', flip);
     $('.background-option').bind('click', setBackground);
     $('.menu-panel .hide-btn').bind('click', closeMenu);
-    $('.menu-panel.closed').bind('click', openMenu);
+    $('.menu-panel').bind('click', openMenu);
   };
 
   appendCards();
