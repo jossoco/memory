@@ -1,4 +1,5 @@
 config = {
+  FLIP_SPEED : 150,
   CARD_SYMBOLS : [
     'fa-camera',
     'fa-certificate',

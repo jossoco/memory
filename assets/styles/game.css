@@ -12,7 +12,7 @@ body > .wrapper {
   opacity: 0.6;
   height: 100%;
   width: 100%;
-  left: 20%;
+  z-index: 1;
 }
 
 body.dark-wood {
@@ -35,14 +35,6 @@ body.dark-wood .card.flipped {
   box-shadow: #333 1px 2px 4px
 }
 
-body.panel-hide > .wrapper {
-  left: 30px;
-}
-
-body.panel-hide .game-panel {
-  /*left: 45px;*/
-}
-
 body.panel-hide .menu-panel {
   width: 30px;
 }
@@ -51,16 +43,14 @@ body.panel-hide .panel-toggle {
   width: 30px;
 }
 
-body.panel-hide .panel-toggle:before {
-  content: ">>";
+body.panel-hide .panel-toggle {
+  text-transform: uppercase;
+  color: #fff;
+  transform: rotate(-90deg);
 }
 
 .panel-toggle {
   width: 100%;
-}
-
-.panel-toggle:before {
-  content: "<< Hide";
 }
 
 .face .wrapper {
@@ -73,20 +63,11 @@ body.panel-hide .panel-toggle:before {
   pointer-events: none;
 }
 
-.wrapper.bk {
-  /*background-image:url("./../images/light_honeycomb-colorized.png");
-  opacity: 1;*/
-}
-
 .game-panel {
   position: absolute;
   left: 22%;
   top: 15px;
-}
-
-.menu-panel {
-  width: 20%;
-  height: 100%;
+  z-index: 2;
 }
 
 .card {

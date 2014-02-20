@@ -2,7 +2,6 @@ $(document).ready(function() {
 
   var ROWS = 4;
   var COLUMNS = 7;
-  var FLIP_SPEED = 100;
   var MAX_FLIPPED_CARDS = 2;
 
   var flippedCards = [];
@@ -57,13 +56,13 @@ $(document).ready(function() {
   };
 
   var flipCard = function (card) {
-    card.translate3d({yRotate: 0}, FLIP_SPEED);
+    card.translate3d({yRotate: 0}, config.FLIP_SPEED);
     card.addClass('flipped');
     flippedCards.push(card.attr('id'));
   };
 
   var unflipCard = function (card) {
-    card.translate3d({yRotate: -180}, FLIP_SPEED);
+    card.translate3d({yRotate: -180}, config.FLIP_SPEED);
     card.removeClass('flipped');
     flippedCards.splice(flippedCards.indexOf(card.attr('id')), 1);
   };
@@ -71,7 +70,7 @@ $(document).ready(function() {
   var unflipAllCards = function () {
     _.each(flippedCards, function (cardId) {
       var card = $('#' + cardId);
-      card.translate3d({yRotate: -180}, FLIP_SPEED);
+      card.translate3d({yRotate: -180}, config.FLIP_SPEED);
       card.removeClass('flipped');
     });
     flippedCards = [];
@@ -90,17 +89,16 @@ $(document).ready(function() {
     }
   };
 
-  var togglePanel = function () {
-    var body = $('body');
-    if (body.hasClass('panel-hide')) {
-      // show panel
-      body.removeClass('panel-hide');
-      $('.menu-item').show();
-    } else {
-      // hide panel
-      body.addClass('panel-hide');
-      $('.menu-item').hide();
-    }
+  var closeMenu = function (e) {
+    e.stopImmediatePropagation();
+    $('body').addClass('panel-hide');
+    $('.panel-menu').addClass('closed');
+  };
+
+  var openMenu = function (e) {
+    e.stopImmediatePropagation();
+    $('body').removeClass('panel-hide');
+    $('.panel-menu').removeClass('closed');
   };
 
   var setBackground = function (event) {
@@ -134,8 +132,9 @@ $(document).ready(function() {
 
     // bind events
     $('.card').bind('click', flip);
-    $('.panel-toggle').bind('click', togglePanel);
     $('.background-option').bind('click', setBackground);
+    $('.menu-panel .hide-btn').bind('click', closeMenu);
+    $('.menu-panel.closed').bind('click', openMenu);
   };
 
   appendCards();

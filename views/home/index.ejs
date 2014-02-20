@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="../../styles/menu.css">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 </head>
-<body class="wave-grid">
+<body class="wave-grid panel-hide">
   <script src="../../js/3p/prefixfree.min.js"></script>
   <script src="../../js/3p/jquery-1.10.2.min.js"></script>
   <script src="../../js/3p/translate3d.js"></script>
@@ -16,18 +16,22 @@
   <script src="../../js/card.js"></script>
 
   <div class="wrapper"></div>
-  <div id="menu" class="panel menu-panel">
-    <span class="panel-toggle"></span>
+  <div id="menu" class="panel menu-panel closed">
 
-    <div class="menu-item background-options">
-      <div id="dark-wood" class="background-option dark-wood">
-        <div class="background-sample"></div>
-        <div class="background-label"><span>Dark Wood</span></div>
-      </div>
+    <div class="menu-container">
+      <span class="panel-toggle settings-btn">Settings</span>
+      <span class="panel-toggle hide-btn">Hide</span>
 
-      <div id="wave-grid" class="selected background-option wave-grid">
-        <div class="background-sample"></div>
-        <div class="background-label"><span>Wave Grid</span></div>
+      <div class="menu-item background-options">
+        <div id="dark-wood" class="background-option dark-wood">
+          <div class="background-sample"></div>
+          <div class="background-label"><span>Dark Wood</span></div>
+        </div>
+
+        <div id="wave-grid" class="selected background-option wave-grid">
+          <div class="background-sample"></div>
+          <div class="background-label"><span>Wave Grid</span></div>
+        </div>
       </div>
     </div>
   </div>
