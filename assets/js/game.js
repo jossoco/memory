@@ -122,6 +122,14 @@ $(document).ready(function() {
     option.addClass('selected');
   };
 
+  var appendBackgroundOptions = function () {
+    var container = $('.background-options');
+    _.each(config.BACKGROUND_OPTIONS, function (option) {
+      var el = BackgroundOption(option.id, option.name);
+      container.append(el);
+    });
+  };
+
   var bindEvents = function () {
     var flip = function (event) {
       var el = $($(event.target).closest('.card'));
@@ -143,5 +151,6 @@ $(document).ready(function() {
   };
 
   appendCards();
+  appendBackgroundOptions();
   bindEvents();
 });

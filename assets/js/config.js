@@ -1,5 +1,19 @@
 config = {
   FLIP_SPEED : 150,
+  BACKGROUND_OPTIONS : {
+    darkwood: {
+      id: 'dark-wood',
+      name: 'Dark Wood'
+    },
+    wavegrid: {
+      id: 'wave-grid',
+      name: 'Wave Grid'
+    },
+    brickwall: {
+      id: 'brick-wall',
+      name: 'Brick Wall'
+    }
+  },
   CARD_SYMBOLS : [
     'fa-camera',
     'fa-certificate',

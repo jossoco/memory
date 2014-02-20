@@ -93,6 +93,11 @@
   background-image:url("./../images/wavegrid.png");
 }
 
+.background-option.brick-wall .background-sample .wrapper {
+  background-image:url("./../images/brickwall-colorized.png");
+  opacity: 1;
+}
+
 .background-option.dark-wood .background-sample {
   background-color: #B17E7E;
 }
