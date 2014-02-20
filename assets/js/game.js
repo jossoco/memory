@@ -107,25 +107,25 @@ $(document).ready(function() {
     $('.menu-panel').addClass('slideIn');
   };
 
-  var setBackground = function (event) {
-    // clear body background
+  var setTheme = function (event) {
+    // remove current theme
     var body = $('body');
-    _.each($('.background-option'), function (option) {
-      var bg = $(option).attr('id');
-      body.removeClass(bg);
+    _.each($('.theme-option'), function (option) {
+      var theme = $(option).attr('id');
+      body.removeClass(theme);
     });
 
-    var option = $(event.target).closest('.background-option');
-    var bg = option.attr('id');
-    body.addClass(bg);
-    $('.background-option').removeClass('selected');
+    var option = $(event.target).closest('.theme-option');
+    var theme = option.attr('id');
+    body.addClass(theme);
+    $('.theme-option').removeClass('selected');
     option.addClass('selected');
   };
 
-  var appendBackgroundOptions = function () {
-    var container = $('.background-options');
-    _.each(config.BACKGROUND_OPTIONS, function (option) {
-      var el = BackgroundOption(option.id, option.name, option.cssClass);
+  var appendThemeOptions = function () {
+    var container = $('.theme-options');
+    _.each(config.THEME_OPTIONS, function (option) {
+      var el = ThemeOption(option.id, option.name, option.cssClass);
       container.append(el);
     });
   };
@@ -146,11 +146,11 @@ $(document).ready(function() {
 
     // bind events
     $('.card').bind('click', flip);
-    $('.background-option').bind('click', setBackground);
+    $('.theme-option').bind('click', setTheme);
     $('.menu-panel .panel-toggle').bind('click', toggleMenu);
   };
 
   appendCards();
-  appendBackgroundOptions();
+  appendThemeOptions();
   bindEvents();
 });

@@ -1,6 +1,6 @@
 config = {
   FLIP_SPEED : 150,
-  BACKGROUND_OPTIONS : {
+  THEME_OPTIONS : {
     darkwood: {
       id: 'dark-wood',
       name: 'Dark Wood'

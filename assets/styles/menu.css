@@ -45,7 +45,7 @@
   transform: translateX(0px);
 }
 
-.background-option {
+.theme-option {
   display: inline-block;
   width: 100%;
   height: 50px;
@@ -55,35 +55,35 @@
   position: relative;
 }
 
-.background-option.selected {
+.theme-option.selected {
   /*background-color: #ccc;*/
 }
 
-.background-option:hover {
+.theme-option:hover {
   /*background-color: #eee;*/
 }
 
-.background-sample {
+.theme-sample {
   width: 40px;
   height: 40px;
   float: left;
   margin: 5px;
 }
 
-.background-sample .wrapper {
+.theme-sample .wrapper {
   height: 100%;
   width: 100%;
   background-size: 80px 80px;
   opacity: 0.6;
 }
 
-.background-label {
+.theme-label {
   float: left;
   height: 40px;
   line-height: 40px;
   margin: 5px;
 }
 
-.background-label span {
+.theme-label span {
   margin: 5px;
 }
