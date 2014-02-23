@@ -98,20 +98,20 @@ $(document).ready(function() {
 
   var toggleMenu = function () {
     var body = $('body');
-    var menu = $('.menu-panel');
+    var menu = $('#menu');
     menu.removeClass('slideIn').removeClass('slideOut');
-    if (body.hasClass('panel-hide')) {
+    if (body.hasClass('menu-hide')) {
       menu.addClass('slideIn');
-      body.removeClass('panel-hide');
+      body.removeClass('menu-hide');
     } else {
-      $('.menu-panel').addClass('slideOut');
-      body.addClass('panel-hide');
+      menu.addClass('slideOut');
+      body.addClass('menu-hide');
     }
   };
 
   var openMenu = function (e) {
     e.stopImmediatePropagation();
-    $('.menu-panel').addClass('slideIn');
+    $('#menu').addClass('slideIn');
   };
 
   var setTheme = function (event) {
