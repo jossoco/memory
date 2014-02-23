@@ -4,7 +4,7 @@ Card = function (id, symbol) {
       '<div class="shape card" id="' + id + '">' +
       '<div class="face ft">' +
       '<div class="wrapper ft">' +
-      '<span class="card-symbol fa fa-3x ' + symbol + '"></span>' +
+      '<span class="card-symbol icon ' + symbol + '"></span>' +
       '</div>' +
       '</div>' +
       '<div class="face bk">' +

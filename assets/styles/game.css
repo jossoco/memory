@@ -68,6 +68,15 @@ body > .wrapper {
   background-color: #5bbda6;
 }
 
+.face.ft {
+  text-align: center;
+}
+
+.face .icon {
+  font-size: 36px;
+  line-height: 100px;
+}
+
 .shape {
   margin: 0
 }
