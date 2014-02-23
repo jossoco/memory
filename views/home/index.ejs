@@ -1,12 +1,13 @@
 <html>
 <head>
+  <link href='http://fonts.googleapis.com/css?family=Inika' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="../../styles/3p/bootstrap.min.css">
   <link rel="stylesheet" href="../../styles/3p/fontello.css">
   <link rel="stylesheet" href="../../styles/shapes.css">
   <link rel="stylesheet" href="../../styles/game.css">
   <link rel="stylesheet" href="../../styles/menu.css">
   <link rel="stylesheet" href="../../styles/themes.css">
-  <link href='http://fonts.googleapis.com/css?family=Inika' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../../styles/win.css">
 </head>
 <body class="dark-wood panel-hide">
   <script src="../../js/3p/prefixfree.min.js"></script>
@@ -27,7 +28,11 @@
     </div>
   </div>
   <div id="game" class="panel game-panel"></div>
-  <div id="title">
-    <span>Some Title</span>
+  <div id="win-message" class="win-message">
+    <span style="font-size:320px" class="icon icon-certificate"></span>
+    <span class="message">You<br /> Win!</span>
+    <span id="restart-btn">
+      <span class="btn">Play Again</span>
+    </span>
   </div>
 </body>

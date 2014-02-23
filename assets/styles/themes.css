@@ -82,3 +82,12 @@ body.denim .card .face.bk {
 body.graph-paper .card .face.bk {
   background-color: #6CAECE;
 }
+
+
+/* Restart buttons */
+
+body.light-wood #restart-btn .btn,
+body.wave-grid #restart-btn .btn,
+body.graph-paper #restart-btn .btn {
+  color: #333;
+}

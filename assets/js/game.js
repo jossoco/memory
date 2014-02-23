@@ -82,9 +82,17 @@ $(document).ready(function() {
            flippedCards[1].substring(0, flippedCards[1].length - 2);
   };
 
+  var checkForWin = function () {
+    if ($('.card:visible').length === 0) {
+      $('#win-message').fadeIn(function () {
+        $('#restart-btn').fadeIn();
+      });
+    }
+  };
+
   var checkForMatch = function () {
     if (isMatch()) {
-      $('#' + flippedCards[0]).add('#' + flippedCards[1]).fadeOut();
+      $('#' + flippedCards[0]).add('#' + flippedCards[1]).fadeOut(checkForWin);
       flippedCards = [];
     }
   };
@@ -130,24 +138,35 @@ $(document).ready(function() {
     });
   };
 
-  var bindEvents = function () {
-    var flip = function (event) {
-      var el = $($(event.target).closest('.card'));
-      if (el.hasClass('flipped')) {
-        unflipCard(el);
-      } else {
-        if (flippedCards.length === MAX_FLIPPED_CARDS) {
-          unflipAllCards();
-        }
-        flipCard(el);
-        checkForMatch();
+  var flip = function (event) {
+    var el = $($(event.target).closest('.card'));
+    if (el.hasClass('flipped')) {
+      unflipCard(el);
+    } else {
+      if (flippedCards.length === MAX_FLIPPED_CARDS) {
+        unflipAllCards();
       }
-    };
+      flipCard(el);
+      checkForMatch();
+    }
+  };
 
-    // bind events
+  var restart = function () {
+    // clear cards
+    $('.card-container').remove();
+    flippedCards = [];
+    
+    $('#win-message').hide();
+    $('#restart-btn').hide();
+    appendCards();
+    $('.card').bind('click', flip);
+  };
+
+  var bindEvents = function () {
     $('.card').bind('click', flip);
     $('.theme-option').bind('click', setTheme);
     $('.menu-panel .panel-toggle').bind('click', toggleMenu);
+    $('#restart-btn').bind('click', restart);
   };
 
   appendCards();
