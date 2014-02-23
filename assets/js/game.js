@@ -84,9 +84,8 @@ $(document).ready(function() {
 
   var checkForWin = function () {
     if ($('.card:visible').length === 0) {
-      $('#win-message').fadeIn(function () {
-        $('#restart-btn').fadeIn();
-      });
+      $('#win-message').addClass('scaleIn');
+      $('#restart-btn').fadeIn();
     }
   };
 
@@ -156,7 +155,7 @@ $(document).ready(function() {
     $('.card-container').remove();
     flippedCards = [];
     
-    $('#win-message').hide();
+    $('#win-message').removeClass('scaleIn');
     $('#restart-btn').hide();
     appendCards();
     $('.card').bind('click', flip);
