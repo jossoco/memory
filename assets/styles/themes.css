@@ -20,13 +20,13 @@ body,
 
 body.wave-grid > .wrapper,
 .theme-option.wave-grid .theme-sample .wrapper {
-  background-image:url("./../images/wavegrid.png");
+  background-image:url("./../images/wave-grid.png");
   opacity: 0.6;
 }
 
 body.dark-wood > .wrapper,
 .theme-option.dark-wood .theme-sample .wrapper {
-  background-image:url("./../images/dark_wood.png");
+  background-image:url("./../images/dark-wood.png");
   opacity: 0.6;
 }
 
