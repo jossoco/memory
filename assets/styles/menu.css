@@ -19,19 +19,23 @@
   position: absolute;
 }
 
-.panel-toggle {
-  text-transform: uppercase;
+.menu-toggle {
   position: absolute;
+  height: 100%;
+  width: 35px;
   cursor: pointer;
-  left: 153px;
-  color: #333;
-  opacity: 0.8;
+  left: 163px;
 }
 
-.menu-panel .panel-toggle.settings-btn {
-  transform: rotate(-90deg);
+.menu-toggle .label {
+  text-transform: uppercase;
+  position: absolute;
+  left: -9px;
   top: 45%;
-} 
+  color: #333;
+  opacity: 0.8;
+  transform: rotate(-90deg);
+}
 
 .slideIn {
   animation-fill-mode: both;

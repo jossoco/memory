@@ -164,7 +164,7 @@ $(document).ready(function() {
   var bindEvents = function () {
     $('.card').bind('click', flip);
     $('.theme-option').bind('click', setTheme);
-    $('.menu-panel .panel-toggle').bind('click', toggleMenu);
+    $('.menu-toggle').bind('click', toggleMenu);
     $('#restart-btn').bind('click', restart);
   };
 
