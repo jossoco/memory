@@ -3,6 +3,7 @@ $(document).ready(function() {
   var ROWS = 4;
   var COLUMNS = 7;
   var MAX_FLIPPED_CARDS = 2;
+  var CARD_CONTAINER_WIDTH = 120;
 
   var flippedCards = [];
 
@@ -50,8 +51,8 @@ $(document).ready(function() {
 
       var row = parseInt(i / COLUMNS, 10);
       var col = i - row * COLUMNS;
-      container.css('left', col * 120 + 'px');
-      container.css('top', row * 120 + 'px');
+      container.css('left', col * CARD_CONTAINER_WIDTH + 'px');
+      container.css('top', row * CARD_CONTAINER_WIDTH + 'px');
     });
   };
 
