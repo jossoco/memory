@@ -117,9 +117,8 @@ $(document).ready(function() {
   var setTheme = function (event) {
     // remove current theme
     var body = $('body');
-    _.each($('.theme-option'), function (option) {
-      var theme = $(option).attr('id');
-      body.removeClass(theme);
+    _.each(config.THEME_OPTIONS, function (option) {
+      body.removeClass(option.id);
     });
 
     var option = $(event.target).closest('.theme-option');
