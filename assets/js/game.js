@@ -35,19 +35,17 @@ $(document).ready(function() {
 
     for (var i = 0; i < cardCount; i++) {
       // create a pair of cards
-      cards.push(Card('card-' + i + '-a', symbols[i]));
-      cards.push(Card('card-' + i + '-b', symbols[i]));
+      cards.push(new Card('card-' + i + '-a', symbols[i]));
+      cards.push(new Card('card-' + i + '-b', symbols[i]));
     }
     return shuffle(cards);
   };
 
   var appendCards = function () {
     var gamePanel = $('#game');
-    var cards = getCards();
-    _.each(cards, function (card, i) {
-      gamePanel.append(card);
-      var id = $(card).find('.card').attr('id');
-      var container = $('#' + id).parent();
+    _.each(getCards(), function (card, i) {
+      gamePanel.append(card.html());
+      var container = $('#' + card.id).parent();
 
       var row = parseInt(i / COLUMNS, 10);
       var col = i - row * COLUMNS;
