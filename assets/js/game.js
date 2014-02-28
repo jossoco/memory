@@ -109,11 +109,6 @@ $(document).ready(function() {
     }
   };
 
-  var openMenu = function (e) {
-    e.stopImmediatePropagation();
-    $('#menu').addClass('slideIn');
-  };
-
   var setTheme = function (event) {
     // remove current theme
     var body = $('body');
