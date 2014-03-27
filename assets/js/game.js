@@ -67,10 +67,12 @@ $(document).ready(function() {
   };
 
   var unflipAllCards = function () {
-    _.each(flippedCards, function (cardId) {
-      var card = $('#' + cardId);
-      card.translate3d({yRotate: -180}, config.FLIP_SPEED);
-      card.removeClass('flipped');
+    var cards = _.map(flippedCards, function (cardId) {
+      return $('#' + cardId);
+    });
+    $(cards).translate3d({yRotate: -180}, config.FLIP_SPEED);
+    $(cards).each(function () {
+      $(this).removeClass('flipped');
     });
     flippedCards = [];
   };
